@@ -53,16 +53,33 @@ int main()
 	//Call pointer version of linear search 
 	{
 		Timer timer("Time to linear search all values (pointers): ");
+		int match = 0;
+		for(size_t i=0; i < search.size();++i){
+			if(linearSearch(numbers.data(),numbers.data()+numbers.size(),search[i])){
+			match++;
+			}
+		}
 	}
 
 	//Call binary search
 	{
         Timer timer("Time to binary search all values: ");
-    }
+
+	int match = 0;
+	for(size_t i=0; i < search.size(); ++i){
+		if(binarySearch(numbers,search[i]))
+			++match;
+	}
+    }  
 
 	//Call the recursive version of binary search
     {
 		Timer timer("Time to binary search all values (Recursive): ");
+		int match = 0;
+		for(size_t i=0; i < search.size(); ++i){
+		if(binarySearchRecursive(numbers.data(),numbers.data()+ numbers.size(),search[i])){
+		++match;
+		}
     }
 
 	IntVector search_bubble = search;
@@ -71,14 +88,16 @@ int main()
 	//Call your bubble sort algorithm
 	{
 		Timer timer ("Time to sort array with bubble sort: ");
+		bubbleSort(search_bubble.data(),search_bubble.data()+search_bubble.size());
 	}
 
 	//Call your merge sort algorithm
 	{
 		Timer timer ("Time to sort array with merge sort: ");
+		mergeSort(search_merge,0,search_merge.size()-1);
 	}
 	
 	return 0;
 }
 
-
+}

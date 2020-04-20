@@ -1,13 +1,57 @@
 #include "sort.h"
 
-void swap(int *x, int *y)
-{
+void swap(int *x, int *y){
 	int temp = *x;
 	*x = *y;
 	*y = temp;
 }
 
-void bubbleSort(int *begin, const int *end)
-{
-	//Use swap to exchange two values
+void bubbleSort(int *begin, const int *end){
+	
 }
+	
+	/*
+	 *
+	int i, j;
+	for(i=0;i<n-1;++i){
+	
+	for(j=0;j<n-i-1;++j){
+		if(array[j]>array[j+1]){
+			swap(&array[j],&array[j+1]);
+		}
+	}
+	}
+}
+	
+*/
+
+	
+	
+	
+	/*	size_t _size = vect._size();
+	for(int i=1; i<_size;++i){
+		for(int sorting =0; sorting<i+1;sorting++){
+			if(vect[i]< vect[sorting]){
+				swap(vect[sorting],vect[i]);
+			}
+		}
+	}
+}
+	*/
+
+	
+	
+	/*	int *headTemp, *nextTemp;
+
+	for(headTemp = begin; headTemp!=end, ++headTemp){
+	
+		for(headTemp=begin;headTemp!=end, ++nextTemp){
+			if(*(nextTemp)>*(nextTemp+1)){
+				swap(headTemp,(nextTemp+1));
+			}
+		}
+	}
+		
+		
+}
+*/
