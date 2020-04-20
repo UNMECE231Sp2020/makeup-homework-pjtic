@@ -7,8 +7,17 @@ void swap(int *x, int *y){
 }
 
 void bubbleSort(int *begin, const int *end){
-	
-}
+/*	
+	 for( int i=1; i>0;++i){
+	  int temp = begin[i];
+	  int j;
+	  
+	  	for(j=i-1; j>=0 && begin[i]>temp;--j) {
+			begin[j+1] = begin[j];
+		}
+		begin[j+1] = temp;
+	 } */	
+
 	
 	/*
 	 *
@@ -26,19 +35,19 @@ void bubbleSort(int *begin, const int *end){
 */
 
 	
+	       
 	
-	
-	/*	size_t _size = vect._size();
-	for(int i=1; i<_size;++i){
+	/*	int size = vect.size();
+		for(int i=1; i<size;++i){
 		for(int sorting =0; sorting<i+1;sorting++){
 			if(vect[i]< vect[sorting]){
-				swap(vect[sorting],vect[i]);
+				swap(vector[sorting],vect[i]);
 			}
 		}
 	}
+}*/
+	
 }
-	*/
-
 	
 	
 	/*	int *headTemp, *nextTemp;

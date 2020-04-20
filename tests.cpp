@@ -39,14 +39,14 @@ int main()
 	{
 		Timer timer("Time to linear search all values: ");
 
-		int found = 0;
+		int match= 0;
 		for (size_t i = 0; i < search.size(); i++)
 		{
 			if (linearSearch(numbers, search[i]))
-				found++;
+				match++;
 		}
 
-		std::cout << "Found "<< found << "/"
+		std::cout << "Found "<< match << "/"
 			<< search.size() << " values." << std::endl;
 	}
 
@@ -59,6 +59,9 @@ int main()
 			match++;
 			}
 		}
+		
+		std::cout << "Found "<< match << "/"
+			<< search.size() << " values." << std::endl;
 	}
 
 	//Call binary search
@@ -70,6 +73,9 @@ int main()
 		if(binarySearch(numbers,search[i]))
 			++match;
 	}
+
+		std::cout << "Found "<< match << "/"
+			<< search.size() << " values." << std::endl;
     }  
 
 	//Call the recursive version of binary search
@@ -77,9 +83,15 @@ int main()
 		Timer timer("Time to binary search all values (Recursive): ");
 		int match = 0;
 		for(size_t i=0; i < search.size(); ++i){
-		if(binarySearchRecursive(numbers.data(),numbers.data()+ numbers.size(),search[i])){
-		++match;
+			if(binarySearchRecursive(numbers.data(),numbers.data()+ numbers.size(),search[i])){
+			++match;
+		
+
+			}
+		
 		}
+		std::cout << "Found "<< match << "/"
+			<< search.size() << " values." << std::endl;
     }
 
 	IntVector search_bubble = search;
@@ -100,4 +112,4 @@ int main()
 	return 0;
 }
 
-}
+
